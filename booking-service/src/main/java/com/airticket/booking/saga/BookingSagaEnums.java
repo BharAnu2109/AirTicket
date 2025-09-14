@@ -1,0 +1,35 @@
+package com.airticket.booking.saga;
+
+/**
+ * Saga Events for Booking Process
+ */
+public enum BookingSagaEvent {
+    START_BOOKING,
+    SEATS_RESERVED,
+    SEATS_RESERVATION_FAILED,
+    PAYMENT_PROCESSED,
+    PAYMENT_FAILED,
+    NOTIFICATION_SENT,
+    NOTIFICATION_FAILED,
+    COMPLETE_BOOKING,
+    COMPENSATE_PAYMENT,
+    COMPENSATE_SEATS,
+    SAGA_COMPLETED,
+    SAGA_FAILED
+}
+
+/**
+ * Saga States for Booking Process
+ */
+public enum BookingSagaState {
+    INITIAL,
+    RESERVING_SEATS,
+    SEATS_RESERVED,
+    PROCESSING_PAYMENT,
+    PAYMENT_PROCESSED,
+    SENDING_NOTIFICATION,
+    COMPLETED,
+    COMPENSATING_PAYMENT,
+    COMPENSATING_SEATS,
+    FAILED
+}
